@@ -44,6 +44,13 @@ app.post("/" , (req,res) => {
     console.log(req.body.num1); // JSON OBJECT RETURN so I has some intuition to access the variable before hand
     
 
+
+    // TODO: Capture values send my post requests
+
+    // This is done via body-parser (npm install body-parser) ---> notes are put above near body parser declaration
+
+
+
     //Variable initialization
 
     // These Below will be parsed as text we need to conver them to Integer 
@@ -77,12 +84,10 @@ app.post("/" , (req,res) => {
     
     
     
-    res.end()
+    res.end() // Use this when using res.write
 
 
-    // TODO: Capture values send my post requests
-
-    // This is done via body-parser (npm install body-parser) ---> notes are put above near body parser declaration
+   
 
     
 })
