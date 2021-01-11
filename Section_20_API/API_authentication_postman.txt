@@ -1,0 +1,26 @@
+Using open weathers API
+
+
+
+Call Example
+
+
+BY CITY:
+
+api.openweathermap.org/data/2.5/weather?q=London&appid={API key}
+
+This is by city. Make sure login and get an api key by signing up.
+
+
+
+Changing temp scale challenge:
+
+IN CELCIUS
+
+-- Order does not matter 
+
+http://api.openweathermap.org/data/2.5/weather?q=Dubai&units=metric&appid=API KEY HERE
+
+// Very diffcult to test parameters so hence for testing them we use postman
+
+API returns in JSON format

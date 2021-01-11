@@ -1,0 +1,36 @@
+API STRUCTURE
+
+
+1) ENDPOINT
+2) PATHS
+3) Parameters
+4) Autentication
+
+
+
+
+End Point:
+
+ https://v2.jokeapi.dev/joke/[Category/-ies] ---> 
+ 
+ This is an endpoint but simply putting this wont work we need to add what kind of variable / category we need 
+ 
+
+
+Path:
+https://v2.jokeapi.dev/joke/Programming
+This is a path we add this onto our endpoint link to access a certain thing 
+
+
+
+Parameters:
+https://v2.jokeapi.dev/joke/Programming?format=xml
+
+format=xml is a parameter addition which comes after the paths after a question mark symbol
+Key -- >  format
+value --> xml
+
+Example of multiple parameters:
+
+URL: https://v2.jokeapi.dev/joke/Programming?format=xml&contains=Hello
+
