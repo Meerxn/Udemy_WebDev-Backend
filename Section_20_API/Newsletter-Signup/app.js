@@ -4,7 +4,7 @@ const bodyParser  = require("body-parser");
 app.use(bodyParser.urlencoded({extended:true}));
 const https = require("https");
 
-app.listen(3000,()=>{
+app.listen(process.env.PORT|| 3000,()=>{
     console.log("running");
 })
 
@@ -92,7 +92,7 @@ const request = https.request(url,options,function(response)  {
 
 app.post("/failure", (req,res)=>{
     res.redirect("/");
-})
+});
 
 
 
