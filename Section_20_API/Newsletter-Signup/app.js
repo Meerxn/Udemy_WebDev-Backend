@@ -56,12 +56,20 @@ const url = "https://us7.api.mailchimp.com/3.0/lists/6f47b563d0";
 //--url 'https://<dc>.api.mailchimp.com/3.0/' \
 //--user 'anystring:YOUR_API_KEY'
 
+//Mail chip auth plus https auth
 
+//https auth needs options takes takes method
 const options = {
     method: "POST",
     auth: "Meerxn3342:f3d277848a6a8fba4352d1a7927ad411-us7"
 }
 const request = https.request(url,options,function(response)  {
+    if (response.statusCode === 200){
+        res.sendFile(__dirname + "/success.html");
+    }
+    else{
+        res.send("Oops something went wrong")
+    }
     response.on("data",(data)=>{
         console.log(JSON.parse(data));
 
@@ -80,6 +88,11 @@ const request = https.request(url,options,function(response)  {
 
 
 });
+
+
+app.post("/failure", (req,res)=>{
+    res.redirect("/");
+})
 
 
 
