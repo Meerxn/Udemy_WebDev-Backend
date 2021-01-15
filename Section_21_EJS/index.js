@@ -3,6 +3,12 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
+const aloha = require(__dirname + "/ls.js")
+console.log(aloha.yo());
+console.log(aloha.bo());
+
+
+//aloha.yo();
 
 
 
@@ -16,7 +22,8 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 //app.use('view engine', 'ejs');
 
-var items = []; // scope of variable can be covered in both
+var items = []; 
+var work = [];// scope of variable can be covered in both
 // we still have variable dec in our post request
 //We need templates to avoid sending html file for each situation
 app.get("/",(req,res)=>{
@@ -51,7 +58,7 @@ app.get("/",(req,res)=>{
         
     // }
 
-    res.render('list', {type: day,newListItems:items});
+    res.render('list', {listTitle: day,newListItems:items});
     
 
 // We gonna use  EJS templating. As we cannot make html mages for very condition (to much work) hence we use a template
@@ -78,14 +85,38 @@ app.get("/",(req,res)=>{
 
 });
 
-app.post("/" ,(req,res)=>{
- var item = req.body.newItem;
- items.push(item); // doing this would add it side by side ( add with new tags ??)
 
-res.redirect("/");
+app.get("/work" ,(req,res)=>{
+    res.render("list", {listTitle:"WorkList" , newListItems:work})
+})
+app.post("/" ,(req,res)=>{
+    let item = req.body.newItem;
+    if (req.body.list === "WorkList"){
+        work.push(item);
+    
+        res.redirect("/work");
+        
+    }
+    else{
+       items.push(item);
+       res.redirect("/") 
+    }
+ 
+  // doing this would add it side by side ( add with new tags ??)
+
 
 })
 
+
+
+
+
+
+app.post("/work" ,(req,res)=>{
+ let item = req.body.newItem;
+ work.push(item);
+
+});
 app.listen(process.env.PORT|| 3000,()=>{
     console.log("running");
 })
