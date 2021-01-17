@@ -43,3 +43,10 @@ CHalenge 5:
 For about and contant add data and partials accordingly 
 
 Challenge 5 completed
+
+
+Challenge 6:
+
+Make navbar navigate to code written ejs files
+
+note: href just puts/and location you add so hence  we add "about" instead of about.ejs since /about renders about.ejs file 
