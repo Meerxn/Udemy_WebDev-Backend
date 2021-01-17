@@ -32,6 +32,7 @@ app.get("/compose", (req,res) => {
 })
 app.post("/" ,(req,res) =>{
   console.log(req.body.usrVal);
+  console.log(req.body.text_var)
 })
 
 

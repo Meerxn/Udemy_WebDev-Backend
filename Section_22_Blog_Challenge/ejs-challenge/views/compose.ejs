@@ -2,8 +2,16 @@
 <%- include('partials/header'); -%>
 <h1>Compose</h1>
 <form action="/" method="POST">
-<input name="usrVal" type="text">
-<button>Publish</button>
+    <label for="">Title</label>
+<input class="form-control"  name = "usrVal" type="text" placeholder="Default input">
+
+<br>
+
+
+    <label for="exampleFormControlTextarea1">Post</label>
+    <textarea class="form-control" name = "text_var" id="exampleFormControlTextarea1" rows="5"></textarea>
+  
+  <button type="submit" class="btn btn-primary">Publish</button>
 </form>
 
 <%- include('partials/footer'); -%>
