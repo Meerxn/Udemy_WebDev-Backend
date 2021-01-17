@@ -18,8 +18,8 @@ app.use(express.static(__dirname + "./views/partials"));
 
 
 app.get("/" , (req,res)=>{
-  res.render("home", {hsc:homeStartingContent}); // testing render works
-  console.log(posts)
+  res.render("home", {hsc:homeStartingContent,allP:posts}); // testing render works
+  //console.log(posts)
 })
 app.get("/about" , (req,res)=>{
   res.render("about", {ac:aboutContent}); // testing render works
