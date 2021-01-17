@@ -1,0 +1,11 @@
+Challenge 1:
+
+
+
+
+Local host 3000 should render home page
+home.ejs has <h1> Home</h1> 
+Change app.js such that it renders that page 
+
+
+Challenge 1 completed 

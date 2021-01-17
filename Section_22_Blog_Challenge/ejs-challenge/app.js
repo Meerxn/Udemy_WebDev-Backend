@@ -16,6 +16,15 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
+app.get("/" , (req,res)=>{
+  res.render("home");
+})
+app.listen (8000,()=>{
+  console.log("server is on ");
+
+})
+
+
 
 
 

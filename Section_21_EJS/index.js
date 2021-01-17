@@ -117,6 +117,6 @@ app.post("/work" ,(req,res)=>{
  work.push(item);
 
 });
-app.listen(process.env.PORT|| 3000,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("running");
 })
