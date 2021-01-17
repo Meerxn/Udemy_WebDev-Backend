@@ -1,0 +1,5 @@
+Notes for Setting up the project and what all i need:
+
+
+WE do not need to upload/ download node_modules online we can locally do this using 
+npm install
