@@ -27,6 +27,10 @@ app.get("/contact" , (req,res)=>{
   res.render("contact", {cc:contactContent}); // testing render works
 })
 
+app.get("/compose", (req,res) => {
+  res.render("compose");
+})
+
 
 
 
