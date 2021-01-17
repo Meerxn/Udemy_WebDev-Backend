@@ -17,11 +17,7 @@ app.use(express.static("public"));
 
 
 app.get("/" , (req,res)=>{
-  res.render("home");
-})
-app.listen (8000,()=>{
-  console.log("server is on ");
-
+  res.render("home", {hsc:homeStartingContent,ac:aboutContent,cc:contactContent}); // testing render works
 })
 
 

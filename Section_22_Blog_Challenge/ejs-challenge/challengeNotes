@@ -9,3 +9,14 @@ Change app.js such that it renders that page
 
 
 Challenge 1 completed 
+
+
+
+Challenge 2:
+
+
+app.js:
+Display content from here into home page in a paragraph tag
+
+My sol:
+ejs variables in para tag on home page and deliver them
