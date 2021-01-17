@@ -30,10 +30,16 @@ app.get("/contact" , (req,res)=>{
 app.get("/compose", (req,res) => {
   res.render("compose");
 })
-app.post("/" ,(req,res) =>{
-  console.log(req.body.usrVal);
-  console.log(req.body.text_var)
-})
+app.post("/compose" ,(req,res) =>{
+  
+  var post = {
+   title: req.body.usrVal,
+   text: req.body.text_var
+
+   
+  };
+
+});
 
 
 
