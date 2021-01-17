@@ -18,8 +18,15 @@ app.use(express.static(__dirname + "./views/partials"));
 
 
 app.get("/" , (req,res)=>{
-  res.render("home", {hsc:homeStartingContent,ac:aboutContent,cc:contactContent}); // testing render works
+  res.render("home", {hsc:homeStartingContent}); // testing render works
 })
+app.get("/about" , (req,res)=>{
+  res.render("about", {ac:aboutContent}); // testing render works
+})
+app.get("/contact" , (req,res)=>{
+  res.render("contact", {cc:contactContent}); // testing render works
+})
+
 
 
 
