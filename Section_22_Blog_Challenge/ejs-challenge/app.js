@@ -39,7 +39,7 @@ app.get("/posts/:topic",(req,res)=>{
     console.log(_.lowerCase(curr_topic));
     if ( _.lowerCase(element.title) === _.lowerCase(curr_topic)){
       console.log("Match found !");
-      return;
+      res.render("post" ,{tt: element.title, tx: element.text})
       
     }
   });
