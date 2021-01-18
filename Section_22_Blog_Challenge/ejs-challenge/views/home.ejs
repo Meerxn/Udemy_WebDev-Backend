@@ -6,7 +6,7 @@
 <%console.log(allP);%>
 <%allP.forEach((element)=>{%>
     <h1><%= element.title%></h1>
-    <p><%= element.text%></p>
+    <p><%= element.text.substring(0,100) + "...";%></p>
 
 
     <%})%>
