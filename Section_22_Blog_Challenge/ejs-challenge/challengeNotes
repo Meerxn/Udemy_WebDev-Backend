@@ -116,3 +116,9 @@ Challenge 13:
 
 
  Challenge 15 completed
+
+
+ Express Routing parameters
+
+
+ essentially we can get colon values paramters type into urls. Helps us compose pages that are similar to each other in one go
