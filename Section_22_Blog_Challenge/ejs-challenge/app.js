@@ -32,7 +32,14 @@ app.get("/compose", (req,res) => {
   res.render("compose");
 })
 app.get("/posts/:topic",(req,res)=>{
-  console.log(req.params.topic)
+  var curr_topic = req.params.topic;
+  posts.forEach((element)=>{
+    if ( element.title === curr_topic){
+      console.log("Match found !");
+      return;
+      
+    }
+  });
 })
 app.post("/compose" ,(req,res) =>{
   
