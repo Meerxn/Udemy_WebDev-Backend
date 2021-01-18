@@ -5,7 +5,9 @@
 
 <%console.log(allP);%>
 <%allP.forEach((element)=>{%>
-    <% console.log(element.title);%>
+    <h2><%= element.title%></h2>
+    <p><%= element.text%></p>
+
 
     <%})%>
 <%- include('partials/footer'); -%>
