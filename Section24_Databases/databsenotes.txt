@@ -1,0 +1,81 @@
+SQL vs NOSQL:
+
+
+- Refreshing our main app shwed us how we cant strore it after re running
+
+
+
+- Choosing dbms is not easy
+
+
+
+Family in databases:
+
+SQL: structured query language
+
+NOSQL: not only structured query language 
+
+
+SQL:
+MySQQL
+POSTgreSQL
+
+
+NOSQL:
+mongoDB
+redis
+
+
+Difference in structure:
+
+sql : Grouped in tables
+- can be inflexible
+- example: modificiations/ specifications per user becomes difficut cause you have to create a new field for everyone
+- SQL tries to square off table hence why new fields would be added and NULLS we be added folr the other one
+
+
+NOSQL:
+- no flexibility issues
+- key value partials
+- Saved as JSON 
+- Can add user based moidifications no issues
+
+Implementation of relationships:
+
+sql: relational 
+nosql: non-relational 
+
+- Wanted to keep a record of orders 
+    customer address price amount --> does not make sense to cram it all one table 
+- Using sql dbms we cna relate tables to each other. We can specify/link up customer table through customer id
+
+
+relationships data might be better to use SQL
+
+
+One to many kinda relationship:
+
+MOngo DB
+
+
+Scalability: No sql better because it is more scalable than sql database 
+
+
+
+
+
+MYSQL vs mongoDB
+mature vs shiny and new 
+Table structure vs Doc structure
+Requires a Schema vs More Flexible to Changes
+Great with Relationships  vs Not great with Relationships
+Scales Vertically cs Horizontally Scalable 
+
+
+
+
+
+
+
+
+
