@@ -56,3 +56,19 @@ WHERE id = 2;
 
 
 /* Add column using ALTER*/
+
+ALTER TABLE prod
+ADD stonks INT;
+
+
+-- Challenge: Change from NULL
+
+UPDATE prod
+SET stonks = 32
+WHERE id = 1;
+
+UPDATE prod
+SET stonks = 12
+WHERE id = 2;
+
+-- Challenge works hence completed
