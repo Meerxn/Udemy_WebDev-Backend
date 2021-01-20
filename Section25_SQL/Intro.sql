@@ -116,5 +116,4 @@ FROM orders -- select what field has the foreign keys
 INNER JOIN customers ON orders.product_id = prod.id -- What to match on
   
 
-
   
