@@ -108,6 +108,12 @@ VALUES (1,4362,2,1)
 SELECT orders.order_number, customers.first_name, customers.last_name -- Select which fields to link 
 FROM orders -- select what field has the foreign keys
 INNER JOIN customers ON orders.customer_id = customers.id -- What to match on
+
+
+-- Challenge: do the same but on products
+SELECT orders.order_number, prod.name, prod.price -- Select which fields to link 
+FROM orders -- select what field has the foreign keys
+INNER JOIN customers ON orders.product_id = prod.id -- What to match on
   
 
 
