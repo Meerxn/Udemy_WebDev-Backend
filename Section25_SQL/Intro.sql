@@ -10,3 +10,16 @@ CREATE TABLE prod (
     price MONEY,
     PRIMARY KEY (ID)
 );
+
+
+-- Inserting into table
+
+INSERT INTO prod
+VALUES(1,"Pen",1.20);
+
+
+-- Skipping if we have some missing col vals
+INSERT INTO prod (id,name)
+VALUES(2,"pencil");
+​
+
