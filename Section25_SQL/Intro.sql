@@ -44,3 +44,15 @@ SELECT * FROM prod ;
 
 SELECT * FROM prod 
 WHERE id = 1; -- we can use various conditional statement to find ranges of values
+
+
+
+/* Updating DATA*/
+
+
+UPDATE prod
+SET price = 0.8
+WHERE id = 2;
+
+
+/* Add column using ALTER*/
