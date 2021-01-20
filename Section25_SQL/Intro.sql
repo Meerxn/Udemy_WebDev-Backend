@@ -23,3 +23,8 @@ INSERT INTO prod (id,name)
 VALUES(2,"pencil");
 ​
 
+-- Cannot do this as id is null
+INSERT INTO prod (name,price)
+VALUES("pencil",6.0);
+​
+
