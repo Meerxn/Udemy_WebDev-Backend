@@ -72,3 +72,8 @@ SET stonks = 12
 WHERE id = 2;
 
 -- Challenge works hence completed
+
+
+/* Delete in SQL*/
+DELETE FROM  prod
+WHERE id = 2 -- make sure to add this where statement
