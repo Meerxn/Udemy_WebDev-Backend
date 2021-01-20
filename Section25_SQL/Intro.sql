@@ -77,3 +77,38 @@ WHERE id = 2;
 /* Delete in SQL*/
 DELETE FROM  prod
 WHERE id = 2 -- make sure to add this where statement
+
+
+
+/* Relationships in SQL*/
+
+
+-- Creating table which has relationships to customers and products with foreign keys 
+
+CREATE TABLE orders (
+  ID INT NOT NULL,
+  order_number INT,
+  customer_id INT,
+  product_id INT, 
+  PRIMARY KEY(ID), 
+  FOREIGN KEY(customer_id) REFERENCES customers(id),
+  FOREIGN KEY (product_id) REFERENCES prod(id) 
+  );
+
+
+--  We will learn how to join tables using these relationships using INNER JOIN
+
+-- First we add values into orders 
+INSERT INTO orders
+VALUES (1,4362,2,1)
+
+
+-- Next we use Inner join 
+
+SELECT orders.order_number, customers.first_name, customers.last_name -- Select which fields to link 
+FROM orders -- select what field has the foreign keys
+INNER JOIN customers ON orders.customer_id = customers.id -- What to match on
+  
+
+
+  
