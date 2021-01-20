@@ -28,3 +28,19 @@ INSERT INTO prod (name,price)
 VALUES("pencil",6.0);
 ​
 
+/* Intro to SQL Commands such as Reading selecting and finding DATA*/
+
+
+-- Reading certain columns
+SELECT id, name,
+FROM prod;
+
+
+-- Reading all from table
+SELECT * FROM prod ;
+
+-- Inorder to sort by a value/ field ( aka extracting a row we would use WHERE)
+
+
+SELECT * FROM prod 
+WHERE id = 1; -- we can use various conditional statement to find ranges of values
