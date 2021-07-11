@@ -43,9 +43,20 @@ const person = new People({
     age: 21
 });
 
-Fruit.insertMany([grapefruit,watermelon,pineapple],function(err){
+// Fruit.insertMany([grapefruit,watermelon,pineapple],function(err){
+//     if (err){
+//         console.log(err)
+//     }
+// })
+//person.save()   
+Fruit.find((err,data)=>{
     if (err){
-        console.log(err)
+        console.log(err);
     }
-})
-//person.save()     
+    else{
+        console.log("FRUITS DATA")
+        data.forEach((item)=>{
+            console.log(item.name);
+        });
+    }
+});  
