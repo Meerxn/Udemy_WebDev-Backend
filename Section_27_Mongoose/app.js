@@ -1,8 +1,14 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/fruitsDB', {useNewUrlParser: true, useUnifiedTopology: true});
 const fruitSchema = new mongoose.Schema({
-    name: String,
-    rating: Number,
+    name: { 
+        type : String,
+        required : [true,"Please enter a name "] },
+    rating: {
+        type: Number,
+        min: 1,
+        max : 10
+    },  
     review: String
 });
 const peopleSchema = new mongoose.Schema({
@@ -17,25 +23,26 @@ const People = mongoose.model("People",peopleSchema)
 
 
 const fruit  = new Fruit({
-    name: "orange",
+   // name: "pumpkin",
     rating: 9,
     review: "ok"
 });
-const grapefruit = new Fruit({
-    name: "grape fruit",
-    rating: 8,
-    review: "big nice"
-});
-const pineapple = new Fruit({
-    name: "Pineapple",
-    rating: 9,
-    review: "Good"
-});
-const watermelon = new Fruit({
-    name: "Water melon",
-    rating: 10,
-    review: " watery"
-});
+fruit.save()
+// const grapefruit = new Fruit({
+//     name: "grape fruit",
+//     rating: 8,
+//     review: "big nice"
+// });
+// const pineapple = new Fruit({
+//     name: "Pineapple",
+//     rating: 9,
+//     review: "Good"
+// });
+// const watermelon = new Fruit({
+//     name: "Water melon",
+//     rating: 10,
+//     review: " watery"
+// });
 
 
 const person = new People({
