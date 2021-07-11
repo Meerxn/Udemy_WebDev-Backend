@@ -59,4 +59,5 @@ Fruit.find((err,data)=>{
             console.log(item.name);
         });
     }
+    mongoose.connection.close();
 });  
