@@ -3,7 +3,8 @@ mongoose.connect('mongodb://localhost:27017/fruitsDB', {useNewUrlParser: true, u
 const fruitSchema = new mongoose.Schema({
     name: { 
         type : String,
-        required : [true,"Please enter a name "] },
+        //required : [true,"Please enter a name "] },
+    },
     rating: {
         type: Number,
         min: 1,
@@ -27,7 +28,7 @@ const fruit  = new Fruit({
     rating: 9,
     review: "ok"
 });
-fruit.save()
+//fruit.save()
 // const grapefruit = new Fruit({
 //     name: "grape fruit",
 //     rating: 8,
@@ -56,15 +57,33 @@ const person = new People({
 //     }
 // })
 //person.save()   
-Fruit.find((err,data)=>{
+// Fruit.find((err,data)=>{
+//     if (err){
+//         console.log(err);
+//     }
+//     else{
+//         console.log("FRUITS DATA")
+//         data.forEach((item)=>{
+//             console.log(item.name);
+//         });
+//     }
+// });  
+
+// Fruit.updateOne({_id :"60eac94748722e2da8b0111d"}, {name:"Peaches"},(err)=>{
+// if (err){
+//     console.log(err)
+// }
+// else{
+//     console.log("data has been updated")
+// }
+// } );
+
+//mongoose.connection.close();
+Fruit.deleteOne({name: "Peaches"} , (err)=>{
     if (err){
-        console.log(err);
+        console.log(err)
     }
     else{
-        console.log("FRUITS DATA")
-        data.forEach((item)=>{
-            console.log(item.name);
-        });
+        console.log("data entry removed");
     }
-    mongoose.connection.close();
-});  
+})
